@@ -29,10 +29,10 @@ class Dashboard extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Campanhas de Doação"),
+        title: const Text("Campanhas de Doação"), //título da barra de navegação do dashboard
         centerTitle: true,
       ),
-      body: ListView.builder(
+      body: ListView.builder( //constrói uma lista rolável de campanhas de doação
         itemCount: campanhas.length,
         itemBuilder: (context, index) {
           final campanha = campanhas[index];
@@ -65,7 +65,7 @@ class Dashboard extends StatelessWidget {
               ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
-                Navigator.push(
+                Navigator.push( //navegação para a tela de geração de QR Code ao clicar em uma campanha
                   context,
                   MaterialPageRoute(
                     builder: (context) => const QrApiExample(),
